@@ -40,7 +40,7 @@ public class GospelItem : MelonMod
         public static void Postfix(ref int id, ref string __result)
         {
             // If searching for the gospel, returns its description
-            if (id == 60) __result = "Demi-fiend earns enough EXP \nto level up but loses one level.";
+            if (id == 60) __result = "Demi-fiend earns enough EXP \nto level up but loses one level. \nReusable.";
         }
     }
 
@@ -89,8 +89,8 @@ public class GospelItem : MelonMod
     public override void OnInitializeMelon()
     {
         // Creates the item
-        datItem.tbl[60].flag = 4; // Normal item
-        datItem.tbl[60].price = 1000; // 1000 macca each
+        datItem.tbl[60].flag = 0; // Reusable item
+        datItem.tbl[60].price = 100000; // 100000 macca
         datItem.tbl[60].skillid = 95; // Triggers the skill n°95
         datItem.tbl[60].use = 1; // Can only be used out of battle
 
