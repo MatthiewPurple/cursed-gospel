@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>gospel_item</RootNamespace>
-    <AssemblyName>gospel_item</AssemblyName>
+    <RootNamespace>cursed_gospel</RootNamespace>
+    <AssemblyName>cursed_gospel</AssemblyName>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>

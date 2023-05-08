@@ -1,15 +1,15 @@
 ﻿using MelonLoader;
 using HarmonyLib;
 using Il2Cpp;
-using gospel_item;
+using cursed_gospel;
 using Il2Cppfacility_H;
 using Il2Cppnewdata_H;
 
-[assembly: MelonInfo(typeof(GospelItem), "Gospel item", "1.0.0", "Matthiew Purple")]
+[assembly: MelonInfo(typeof(CursedGospel), "Cursed Gospel", "1.0.0", "Matthiew Purple")]
 [assembly: MelonGame("アトラス", "smt3hd")]
 
-namespace gospel_item;
-public class GospelItem : MelonMod
+namespace cursed_gospel;
+public class CursedGospel : MelonMod
 {
     // After creating the shop
     [HarmonyPatch(typeof(fclShopCalc), nameof(fclShopCalc.shpCreateItemList))]
@@ -17,8 +17,11 @@ public class GospelItem : MelonMod
     {
         public static void Postfix(ref fclDataShop_t pData)
         {
-            // Adds the gospel to the shop
-            pData.BuyItemList[pData.BuyItemCnt++] = 60;
+            if (pData.Place == 5 && dds3GlobalWork.DDS3_GBWK.item[60] == 0)
+            {
+                // Adds the gospel to the shop
+                pData.BuyItemList[pData.BuyItemCnt++] = 60;
+            }
         }
     }
 
@@ -29,7 +32,7 @@ public class GospelItem : MelonMod
         public static void Postfix(ref int id, ref string __result)
         {
             // If searching for the gospel, returns its name
-            if (id == 60) __result = "Gospel";
+            if (id == 60) __result = "Cursed Gospel";
         }
     }
 
@@ -60,11 +63,10 @@ public class GospelItem : MelonMod
                     unit.exp = rstCalcCore.GetNextExpDisp(unit, 0) - 1;
 
                     bool hasLostStat = false;
+                    List<short> statList = new List<short> { 0, 2, 3, 4, 5 };
 
                     while (!hasLostStat)
                     {
-                        List<short> statList = new List<short> { 0, 2, 3, 4, 5 };
-
                         Random rnd = new Random();
                         short stat = statList[rnd.Next(statList.Count)];
 
