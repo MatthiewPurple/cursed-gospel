@@ -10,19 +10,19 @@
 
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\smt3hd\MelonLoader\Dependencies\Il2CppAssemblyGenerator\0Harmony.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\smt3hd\MelonLoader\Dependencies\Il2CppAssemblyGenerator\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\smt3hd\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\smt3hd\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppInterop.Runtime">
-      <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\smt3hd\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\smt3hd\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Il2Cppmscorlib">
-      <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\smt3hd\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\smt3hd\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
     </Reference>
     <Reference Include="MelonLoader">
-      <HintPath>E:\Program Files (x86)\SteamLibrary\steamapps\common\smt3hd\MelonLoader\net6\MelonLoader.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\smt3hd\MelonLoader\net6\MelonLoader.dll</HintPath>
     </Reference>
   </ItemGroup>
 

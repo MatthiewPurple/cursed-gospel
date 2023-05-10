@@ -17,7 +17,7 @@ public class CursedGospel : MelonMod
     {
         public static void Postfix(ref fclDataShop_t pData)
         {
-            if (pData.Place == 5 && dds3GlobalWork.DDS3_GBWK.item[60] == 0)
+            if (pData.Place == 6 && dds3GlobalWork.DDS3_GBWK.item[60] == 0)
             {
                 // Adds the gospel to the shop
                 pData.BuyItemList[pData.BuyItemCnt++] = 60;
@@ -92,7 +92,7 @@ public class CursedGospel : MelonMod
     {
         // Creates the item
         datItem.tbl[60].flag = 0; // Reusable item
-        datItem.tbl[60].price = 100000; // 100000 macca
+        datItem.tbl[60].price = 100000; // 100,000 macca
         datItem.tbl[60].skillid = 95; // Triggers the skill n°95
         datItem.tbl[60].use = 1; // Can only be used out of battle
 
