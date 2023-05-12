@@ -70,7 +70,8 @@ public class CursedGospel : MelonMod
                         Random rnd = new Random();
                         short stat = statList[rnd.Next(statList.Count)];
 
-                        if (unit.param[stat] > 1)
+                        // If the BASE stat is higher than 1 (total stat minus magatama stat)
+                        if (unit.param[stat] - tblHearts.fclHeartsTbl[dds3GlobalWork.DDS3_GBWK.heartsequip].GrowParamTbl[stat] > 1)
                         {
                             unit.param[stat]--;
                             hasLostStat = true;
