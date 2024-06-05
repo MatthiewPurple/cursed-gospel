@@ -36,7 +36,7 @@ public class CursedGospel : MelonMod
         }
     }
 
-    // After getting the name of a skill
+    // After getting the description of a skill
     [HarmonyPatch(typeof(datItemHelp_msg), nameof(datItemHelp_msg.Get))]
     private class Patch3
     {
@@ -47,7 +47,7 @@ public class CursedGospel : MelonMod
         }
     }
 
-    // After apply a skill effect outside of battle
+    // After applying a skill effect outside of battle
     [HarmonyPatch(typeof(datCalc), nameof(datCalc.datExecSkill))]
     private class Patch4
     {
