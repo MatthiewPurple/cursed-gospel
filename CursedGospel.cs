@@ -26,7 +26,7 @@ public class CursedGospel : MelonMod
         }
     }
 
-    // After getting the name of a skill
+    // After getting the name of an item
     [HarmonyPatch(typeof(datItemName), nameof(datItemName.Get))]
     private class Patch2
     {
