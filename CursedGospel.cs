@@ -17,7 +17,7 @@ public class CursedGospel : MelonMod
     {
         public static void Postfix(ref fclDataShop_t pData)
         {
-            // If the shop is the one is Kagutsuchi's Tower and the player doesn't already of the item
+            // If the shop is the one is Kagutsuchi's Tower and the player doesn't already have the item
             if (pData.Place == 6 && dds3GlobalWork.DDS3_GBWK.item[60] == 0)
             {
                 // Adds the gospel to the shop
